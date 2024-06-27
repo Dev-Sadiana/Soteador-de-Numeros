@@ -6,6 +6,11 @@ function sortear() {
     let sorteados = [];                                                     //array dos números sorteados
     let numero;
 
+    if (de >= ate) {
+        alert(`Preencha os dados corretamente! Campo "Do número" deve ser inferior ao campo "Até o número".`);
+        return;
+    } else {
+
     for (let i = 0; i < quantidade; i++) {
         numero = gerarNumeroAleatorio(de, ate);
 
@@ -21,6 +26,7 @@ function sortear() {
                                                                             // para incluir uma propriedade ao elemento do HTML
 
     ativarBotaoReiniciar();
+    }
 }
 
 function gerarNumeroAleatorio(min, max) {
